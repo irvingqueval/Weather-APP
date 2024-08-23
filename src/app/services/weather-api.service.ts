@@ -13,6 +13,8 @@ const API_URL = environment.apuUrl;
 export class WeatherApiService {
   private http = inject(HttpClient);
 
+  constructor() {}
+  
   getWeather(city: string) {
     return this.http.get(`${API_URL}?q=${city}&appid=${API_KEY}`);
   }
